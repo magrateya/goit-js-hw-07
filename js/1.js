@@ -1,11 +1,3 @@
-// const itemEl = document.querySelectorAll('.item');
-// console.log(`В списке ${itemEl.length} категории.`);
-
-// const getItemElLength = (function () {
-//   const itemEl = document.querySelectorAll('.item');
-//   console.log(`В списке ${itemEl.length} категории.`);
-// })();
-
 const getItemElLength = (function () {
   const listEl = document.querySelector('#categories');
   const itemEl = listEl.querySelectorAll('.item');

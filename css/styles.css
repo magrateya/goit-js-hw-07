@@ -4,8 +4,10 @@
 }
 #gallery li {
   border: 1px solid gray;
-  justify-content: space-between;
-  width: calc(100% / 3);
+  width: 300px;
+}
+#gallery li:not(:last-child) {
+  margin-right: 40px;
 }
 img {
   width: 100%;

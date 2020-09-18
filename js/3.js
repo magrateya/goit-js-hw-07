@@ -16,20 +16,10 @@ const images = [
   },
 ];
 
-const galleryListEl = document.querySelector('#gallery');
-
-const makeGalleryItems = options => {
-  return options.map(option => {
-    const listItemEl = document.createElement('li');
-    const imageEl = document.createElement('img');
-    imageEl.setAttribute('scr', `${option.url}`);
-    imageEl.setAttribute('alt', `${option.alt}`);
-    listItemEl.appendChild(imageEl);
-    console.log(listItemEl);
-    return listItemEl;
-  });
+const makeListMarkup = image => {
+  return `<li><img src='${image.url}' alt='${image.alt}'></li>`;
 };
-const galleryItems = makeGalleryItems(images);
+const galleryListEl = document.querySelector('#gallery');
+const galleryItems = images.map(makeListMarkup).join('');
 
-console.log(galleryItems);
-galleryListEl.append(...galleryItems);
+galleryListEl.insertAdjacentHTML('afterbegin', galleryItems);
